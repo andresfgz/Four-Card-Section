@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Poppins', sans-serif;
+
+}
+
+header {
+    margin: 50px auto;
+    max-width: 500px; /* PONEMOS EL MAXIMO DEL CONTAINER Y CON MARGIN 0 AUTO LO POSICIONAMOS EN EL MEDIO TITULO Y PARRAFO*/
+    text-align: center;
+}
+
+h1 {
+    font-weight: 200;
+    margin: 0;
+}
+
+h1 span{
+    font-weight: 600;
+}
+
+p{
+    columns: hsl(229, 6%, 66%);
+    opacity: 0.6;
+}
+
+.container {
+    display: flex; /* Pone un elemento al lado del otro*/
+    flex-wrap: wrap; /* Hace que si el elemento no cabe bien se salta hacia abajo*/
+    margin: 0 auto; /* Cumple la funcion de centarlo horizontalmente*/
+    max-width: 1140px; /* Limitamos el maximo del container segun el diseno*/
+    justify-content: center; /*Centramos horizontalmente los .box */
+
+}
+
+.box {
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+    
+    border-radius: 8px;
+    padding: 30px; /* Padding con el container */
+    margin: 15px;  /* SUMAMOS 350 + 15 *3 QUE SON LOS BOX QUE DEBEN CABER EN UNA LINEA WIDTH 1140*/
+    width:  350px;
+}
+
+
+
+.box-red {
+    border-top: 3px solid hsl(0, 78%, 62%);
+}
+
+.box-cyan {
+    border-top: 3px solid hsl(180, 62%, 55%);
+    
+}
+
+.box-orange {
+    border-top: 3px solid hsl(34, 97%, 64%);
+}
+
+.box-blue {
+    border-top: 3px solid hsl(212, 86%, 64%);
+}
+
+.box-push {
+    transform: translateY(50%); /* se hace que el box se mueva 50 % hacia abajo */
+}
+
+.box h2 {
+    margin: 0;
+}
+
+.box p {
+    
+    margin: 15px 0 30px; /* margin entre el parrafo y el titulo*/
+    
+}
+
+.box img {
+    display: block; /*Se asignamos el display para que pueda tgomar el margin */
+    margin-left: auto; /* Se posiciona totalmente a la derecha del box*/
+}
+
+
+footer {
+    margin-top: 130px;
+    text-align: center;
+    
+}
+
+@media (max-width: 775px){
+    .box-push {
+        transform: translateY(0); /* PASAMOS EL TRANSFORM DE NUEVO A 0 PARA QUE SE ACOMODEN CON EL FLEX QUE TIENE*/
+    }
+    footer {
+        margin-top: 90px;
+        font-size: 14px;
+    }
+    
+}
